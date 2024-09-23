@@ -1,0 +1,15 @@
+{
+  "name": "my-quiz",
+  "version": "1.0.0",
+  "description": "Quiz app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+   
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

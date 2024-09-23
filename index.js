@@ -1,29 +1,53 @@
-let readlineSync = require("readline-Sync");
-let score = 0;
-let userName = readlineSync.question("what is your Name");
-console.log("Welcome " + userName + " Do YOU KNOW Rushi?");
-function play(question,answer){
-let userAnswer= readlineSync.question(questions);
-if(userAnswer.toUpperCase() === answer.toUpperCase()){
-console.log('Right')
-score = score + 1;
+let readlineSync = require('readline-sync');
+let userName = readlineSync.question("May I have your name ?");
+let score= 0;
 
+console.log("Hi " + userName + " how are You");
+
+//  create a mcq question and  increse score 
+let age = readlineSync.question("you are older than 25?");
+if(age === "yes"){
+console.log("you are right");
+score = score + 1;
+}
+else if(age=== "no"){
+    let age2 = readlineSync.question("how old you are");
+    console.log(age2);
 }
 else{
-console.log("wrong")
+    console.log("your are wrong");
 }
-console.log("current score is : " + score);
-console.log('--------------')
+console.log("score " + score)
+
+let yoursmart = readlineSync.question("Your are smart ?");
+
+if(yoursmart === "yes"){
+    console.log("yes i am smart");
+    score = score +1;
 }
-let questions = [{
-question:"where do I live. \n 1).pune \n 2).Bangalore  \n 3).Goa",
-answer: "2).Bangalore"
-},
-{
-question:"My favorite superhero would be  1).superman \n 2).Spiderman \n 3).Batman",
-answer: "2).Spiderman"
-},
-{
-question:"where do i work. \n 1).Microsoft \n 2).5Dsolutions  \n 3).JPMorgans",
-answer: "1).Microsoft"
-}]
+else if(yoursmart === "not really"){
+    console.log("not sure")
+    score = score + 1;
+}
+else{
+    console.log("no i am not a smart person");
+    score  = score -1;
+}
+console.log("score"+score);
+
+
+// fuctions in js 
+    function add(one,two){
+        let sum = one + two;
+        console.log(" one is " + one +"and "+" two is "+ two+ " so result is "+ sum);
+
+        return sum;
+    }
+    add(5,6);
+    function mul(one,two){
+        let sum = one *  two;
+        console.log(" one is " + one +"and "+" two is "+ two + " so result is "+ sum);
+
+        return sum;
+    }
+    mul(5,6);
